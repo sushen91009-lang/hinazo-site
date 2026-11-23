@@ -48,6 +48,12 @@
 
   <main id="main">
     <section class="hero" id="top">
+      <div class="hero-media" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/videos/video4.jpg">
+          <source src="assets/videos/video4_hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
       <img class="hero-mark" src="assets/hinazo-elephant-transparent.png" alt="" aria-hidden="true">
       <div class="hero-inner">
         <div class="hero-copy">
@@ -93,60 +99,40 @@
           <span class="rule" aria-hidden="true"></span>
           <p class="lead">さまざまな業種のお客様と、成果を形にしてきました。</p>
         </header>
-        <div class="card-grid">
-          <article class="case-card">
-            <h3 class="case-title">［業種・店舗名］</h3>
-            <dl>
-              <div class="case-row">
-                <dt>課題</dt>
-                <dd>［例：開設後の伸び悩み］</dd>
-              </div>
-              <div class="case-row">
-                <dt>施策</dt>
-                <dd>［例：IP設計と投稿方針の刷新］</dd>
-              </div>
-              <div class="case-row">
-                <dt>成果</dt>
-                <dd>［例：3か月でフォロワー◯倍］</dd>
-              </div>
-            </dl>
+        <div class="case-video-grid">
+          <article class="case-video-card">
+            <div class="case-video-wrap">
+              <video controls playsinline preload="metadata" poster="assets/videos/video1.jpg">
+                <source src="assets/videos/video1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h3 class="case-video-title">海鮮店「艇鮮匯」の導入事例</h3>
           </article>
-          <article class="case-card">
-            <h3 class="case-title">［業種・店舗名］</h3>
-            <dl>
-              <div class="case-row">
-                <dt>課題</dt>
-                <dd>［例：開設後の伸び悩み］</dd>
-              </div>
-              <div class="case-row">
-                <dt>施策</dt>
-                <dd>［例：IP設計と投稿方針の刷新］</dd>
-              </div>
-              <div class="case-row">
-                <dt>成果</dt>
-                <dd>［例：3か月でフォロワー◯倍］</dd>
-              </div>
-            </dl>
+          <article class="case-video-card">
+            <div class="case-video-wrap">
+              <video controls playsinline preload="metadata" poster="assets/videos/video2.jpg">
+                <source src="assets/videos/video2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h3 class="case-video-title">初心者とプロチーム、立ち上げの違い</h3>
           </article>
-          <article class="case-card">
-            <h3 class="case-title">［業種・店舗名］</h3>
-            <dl>
-              <div class="case-row">
-                <dt>課題</dt>
-                <dd>［例：開設後の伸び悩み］</dd>
-              </div>
-              <div class="case-row">
-                <dt>施策</dt>
-                <dd>［例：IP設計と投稿方針の刷新］</dd>
-              </div>
-              <div class="case-row">
-                <dt>成果</dt>
-                <dd>［例：3か月でフォロワー◯倍］</dd>
-              </div>
-            </dl>
+          <article class="case-video-card">
+            <div class="case-video-wrap">
+              <video controls playsinline preload="metadata" poster="assets/videos/video3.jpg">
+                <source src="assets/videos/video3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h3 class="case-video-title">視聴者1万人のライブ配信ルーム構築</h3>
+          </article>
+          <article class="case-video-card">
+            <div class="case-video-wrap">
+              <video controls playsinline preload="metadata" poster="assets/videos/video6.jpg">
+                <source src="assets/videos/video6.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h3 class="case-video-title">成果ハイライト</h3>
           </article>
         </div>
-        <p class="cases-note">※事例は順次掲載予定です。</p>
       </div>
     </section>
 
@@ -157,6 +143,14 @@
           <span class="rule" aria-hidden="true"></span>
           <p class="lead">遊んで、つながる。雛象の新しいエンターテインメント。</p>
         </header>
+        <article class="game-video-card">
+          <div class="game-video-wrap">
+            <video controls playsinline preload="metadata" poster="assets/videos/video5.jpg">
+              <source src="assets/videos/video5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3 class="game-video-caption">eスポーツ大会ハイライト</h3>
+        </article>
         <div class="game-card">
           <p class="game-badge">COMING SOON</p>
           <p class="game-title">ゲーム＆チャージ 準備中</p>
@@ -217,6 +211,12 @@
           if (toggle) toggle.checked = false;
         });
       });
+
+      var heroVideo = document.querySelector(".hero-video");
+      if (heroVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        heroVideo.removeAttribute("autoplay");
+        heroVideo.pause();
+      }
     })();
   </script>
 </body>
