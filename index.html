@@ -7,7 +7,7 @@
   <meta name="description" content="小紅書・TikTok・Instagramを中心に、店舗のIPアカウント構築から日々の運用、集客の改善までを一貫してサポートするSNS運用コンサルティング会社、雛象株式会社です。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
@@ -16,7 +16,7 @@
   <a class="skip-link" href="#main">本文へスキップ</a>
 
   <header class="site-header">
-    <div class="header-inner">
+    <div class="wrap header-inner">
       <a class="brand" href="#top">
         <img class="brand-mark" src="assets/hinazo-elephant-transparent.png" alt="" aria-hidden="true">
         <span class="brand-text">
@@ -48,28 +48,25 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="hero-media" aria-hidden="true">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/videos/video4.jpg">
-          <source src="assets/videos/video4_hero.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-      </div>
-      <img class="hero-mark" src="assets/hinazo-elephant-transparent.png" alt="" aria-hidden="true">
-      <div class="hero-inner">
+      <div class="wrap hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">SNS運用コンサルティング</p>
-          <h1>SNSで、<br>お店の“顔”を育てる。</h1>
+          <h1>SNSで、お店の“顔”を育てる。</h1>
           <p class="hero-sub">小紅書・TikTok・Instagramを中心に、店舗のIPアカウント構築から日々の運用、集客の改善までを一貫してサポートするSNS運用<span class="nowrap">コンサルティング会社</span>です。</p>
           <a class="btn" href="#contact">無料相談はこちら</a>
+        </div>
+        <div class="hero-media">
+          <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/videos/video4.jpg">
+            <source src="assets/videos/video4_hero.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </section>
 
-    <section class="section section--cream" id="services">
-      <div class="section-inner">
+    <section class="section" id="services">
+      <div class="wrap">
         <header class="section-head">
           <h2>サービス</h2>
-          <span class="rule" aria-hidden="true"></span>
           <p class="lead">ブランドの魅力を、届くべき人へ。戦略から<span class="nowrap">実行</span>まで伴走します。</p>
         </header>
         <div class="card-grid">
@@ -92,11 +89,10 @@
       </div>
     </section>
 
-    <section class="section" id="cases">
-      <div class="section-inner">
+    <section class="section section--cream" id="cases">
+      <div class="wrap">
         <header class="section-head">
           <h2>導入事例</h2>
-          <span class="rule" aria-hidden="true"></span>
           <p class="lead">さまざまな業種のお客様と、成果を形にしてきました。</p>
         </header>
         <div class="case-video-grid">
@@ -114,7 +110,7 @@
                 <source src="assets/videos/video2.mp4" type="video/mp4">
               </video>
             </div>
-            <h3 class="case-video-title">初心者とプロチーム、立ち上げの違い</h3>
+            <h3 class="case-video-title">初心者とプロチーム、<br>立ち上げの違い</h3>
           </article>
           <article class="case-video-card">
             <div class="case-video-wrap">
@@ -122,7 +118,7 @@
                 <source src="assets/videos/video3.mp4" type="video/mp4">
               </video>
             </div>
-            <h3 class="case-video-title">視聴者1万人のライブ配信ルーム構築</h3>
+            <h3 class="case-video-title">視聴者1万人の<br>ライブ配信ルーム構築</h3>
           </article>
           <article class="case-video-card">
             <div class="case-video-wrap">
@@ -136,34 +132,34 @@
       </div>
     </section>
 
-    <section class="section section--game" id="game">
-      <div class="section-inner">
+    <section class="section" id="game">
+      <div class="wrap">
         <header class="section-head">
           <h2>ゲーム</h2>
-          <span class="rule" aria-hidden="true"></span>
           <p class="lead">遊んで、つながる。雛象の新しいエンターテインメント。</p>
         </header>
-        <article class="game-video-card">
-          <div class="game-video-wrap">
-            <video controls playsinline preload="metadata" poster="assets/videos/video5.jpg">
-              <source src="assets/videos/video5.mp4" type="video/mp4">
-            </video>
+        <div class="game-row">
+          <article class="game-video-card">
+            <div class="game-video-wrap">
+              <video controls playsinline preload="metadata" poster="assets/videos/video5.jpg">
+                <source src="assets/videos/video5.mp4" type="video/mp4">
+              </video>
+            </div>
+            <h3 class="game-video-caption">eスポーツ大会ハイライト</h3>
+          </article>
+          <div class="game-card">
+            <p class="game-badge">COMING SOON</p>
+            <p class="game-title">ゲーム＆チャージ 準備中</p>
+            <p class="game-text">ゲームのプレイやチャージができるページを準備しています。公開まで、今しばらくお待ちください。</p>
           </div>
-          <h3 class="game-video-caption">eスポーツ大会ハイライト</h3>
-        </article>
-        <div class="game-card">
-          <p class="game-badge">COMING SOON</p>
-          <p class="game-title">ゲーム＆チャージ 準備中</p>
-          <p class="game-text">ゲームのプレイやチャージができるページを準備しています。<br>公開まで、今しばらくお待ちください。</p>
         </div>
       </div>
     </section>
 
     <section class="section section--cream" id="about">
-      <div class="section-inner">
+      <div class="wrap">
         <header class="section-head">
           <h2>会社概要</h2>
-          <span class="rule" aria-hidden="true"></span>
         </header>
         <div class="about-grid">
           <img class="about-logo" src="assets/hinazo-logo-cropped.png" width="1198" height="1048" alt="雛象株式会社 CHUXIANG MEDIA のロゴ">
@@ -177,17 +173,16 @@
     </section>
 
     <section class="section section--charcoal" id="contact">
-      <div class="section-inner">
+      <div class="wrap">
         <header class="section-head">
           <h2>お問い合わせ</h2>
-          <span class="rule" aria-hidden="true"></span>
         </header>
-        <p class="contact-body">SNS運用に関するお悩み、まずはお気軽にご相談ください。<br>現状のアカウント診断から、最適なご提案を<span class="nowrap">いたします</span>。</p>
+        <p class="contact-body">SNS運用に関するお悩み、まずはお気軽にご相談ください。現状のアカウント診断から、最適なご提案を<span class="nowrap">いたします</span>。</p>
         <div class="contact-panel">
           <p class="contact-name">雛象株式会社</p>
           <p class="contact-en">Hinazo Co Ltd</p>
           <ul class="contact-list">
-            <li>所在地：〒530-0047 大阪府大阪市北区西天満四丁目8番28号</li>
+            <li>所在地：〒530-0047 <span class="nowrap">大阪府大阪市北区</span><span class="nowrap">西天満四丁目8番28号</span></li>
             <li>メール：<a href="mailto:sushen91009@gmail.com">sushen91009@gmail.com</a></li>
             <li>電話：<a href="tel:+819039907999">090-3990-7999</a></li>
           </ul>
@@ -200,7 +195,9 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 雛象株式会社 Hinazo Co Ltd All Rights Reserved.</p>
+    <div class="wrap">
+      <p>© 2026 雛象株式会社 Hinazo Co Ltd All Rights Reserved.</p>
+    </div>
   </footer>
 
   <script>
