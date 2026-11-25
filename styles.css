@@ -364,9 +364,41 @@ a {
   color: var(--muted);
 }
 
-.hero-mark {
-  width: min(60%, 240px);
+.hero-media {
+  position: relative;
+  max-width: 28rem;
   margin: 0 auto;
+  background: var(--charcoal-deep);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.hero-fallback,
+.hero-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-video {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
 }
 
 /* Sections */
@@ -465,6 +497,67 @@ a {
   margin-top: 0.85rem;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+
+/* Game */
+.game-row {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.game-video-card {
+  max-width: 200px;
+}
+
+.game-video {
+  aspect-ratio: 9 / 16;
+  background: var(--charcoal-deep);
+  border: 1px solid var(--line);
+  border-bottom: 3px solid var(--gold);
+  overflow: hidden;
+}
+
+.game-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.game-video-card h3 {
+  margin-top: 0.85rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.game-card {
+  padding: 1.75rem 1.5rem 2rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+}
+
+.game-badge {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--gold);
+  color: var(--gold-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.game-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.game-card p:last-of-type {
+  margin: 0;
+  color: var(--muted);
 }
 
 /* Flow */
@@ -748,15 +841,16 @@ a {
   }
 
   .hero-inner {
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr minmax(280px, 420px);
     align-items: center;
     gap: 3rem;
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
   }
 
-  .hero-mark {
-    width: 100%;
+  .hero-media {
+    max-width: none;
+    margin: 0;
   }
 
   .section,
@@ -783,6 +877,16 @@ a {
 
   .flow {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .game-row {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .game-video-card {
+    max-width: none;
   }
 
   .case-grid {
