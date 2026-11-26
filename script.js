@@ -23,3 +23,15 @@
     if (event.target.closest("a")) setOpen(false);
   });
 })();
+
+/* The language buttons: what is chosen is remembered on this device (see lang.js). */
+(function () {
+  var links = document.querySelectorAll(".lang-switch a[data-lang]");
+  for (var i = 0; i < links.length; i += 1) {
+    links[i].addEventListener("click", function (event) {
+      try {
+        window.localStorage.setItem("hinazou-lang", event.currentTarget.getAttribute("data-lang"));
+      } catch (error) {}
+    });
+  }
+})();

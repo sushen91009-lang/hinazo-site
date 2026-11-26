@@ -1,7 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hinazou.jp/</loc></url>
-  <url><loc>https://hinazou.jp/company.html</loc></url>
-  <url><loc>https://hinazou.jp/contact.html</loc></url>
-  <url><loc>https://hinazou.jp/privacy.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hinazou.jp/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/app.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/app.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/app.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/app.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/zh/app.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/app.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/app.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/app.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/en/app.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/app.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/app.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/app.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/app.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/company.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/company.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/company.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/company.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/company.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/zh/company.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/company.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/company.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/company.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/company.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/en/company.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/company.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/company.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/company.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/company.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/contact.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/zh/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/contact.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/contact.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/zh/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/app-privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/app-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/app-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/app-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/app-privacy.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/zh/app-privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/app-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/app-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/app-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/app-privacy.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/en/app-privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/app-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/app-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/app-privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/app-privacy.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/app-support.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/app-support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/app-support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/app-support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/app-support.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/zh/app-support.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/app-support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/app-support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/app-support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/app-support.html"/>
+  </url>
+  <url>
+    <loc>https://hinazou.jp/en/app-support.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hinazou.jp/app-support.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://hinazou.jp/zh/app-support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hinazou.jp/en/app-support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hinazou.jp/app-support.html"/>
+  </url>
 </urlset>
