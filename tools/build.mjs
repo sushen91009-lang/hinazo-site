@@ -46,7 +46,7 @@ const url = (file, code) => `${SITE}${LANGS[code].dir}${file === "index.html" ? 
 // ---------------------------------------------------------------- names and shared texts
 
 const COMPANY = { ja: "雛象株式会社", zh: "雏象", en: "Hinazou Co Ltd" };
-const APP_NAME = { ja: "【アプリ名】", zh: "【App名】", en: "[App name]" };
+const APP_NAME = { ja: "象訳", zh: "象译", en: "Zou Translate" };
 const ADDRESS = {
   ja: '〒530-0047 <span class="nowrap">大阪府大阪市北区</span><span class="nowrap">西天満四丁目8番28号</span>',
   zh: '〒530-0047 <span class="nowrap">日本大阪府大阪市北区</span><span class="nowrap">西天满四丁目8番28号</span>',
