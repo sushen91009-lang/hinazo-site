@@ -8,7 +8,7 @@
 // The pages this writes are committed like any other file; nothing runs on the server.
 // What is NOT made here and never changed by it: styles.css, script.js, assets/ (the logo is
 // the original picture file), CNAME, robots.txt.
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
@@ -726,30 +726,66 @@ ${faq.map((item) => `        <h3 class="faq-q">${L(item.q)}</h3>\n        <p>${L
     </section>`;
 }
 
+// The app's privacy policy (Rc 2026-11-27: the Chinese text is final and word for word; the Japanese
+// and English are translations of it). The three texts live in tools/policy/app-privacy.{zh,ja,en}.md.
+// The date it was made is the day it went online: change POLICY_DATE when the date changes.
+const POLICY_DATE = { ja: "2026年11月27日", zh: "2026年11月27日", en: "November 27, 2026" };
+const POLICY_TEXT = Object.fromEntries(
+  ORDER.map((code) => [code, readFileSync(new URL(`./policy/app-privacy.${code}.md`, import.meta.url), "utf8")]),
+);
+
+/** The policy file of the language being written, as HTML: only what those files use
+ *  (a first-line title, **numbered titles**, (1) sub-titles, - lists, paragraphs, **bold**). */
+function policyHtml() {
+  let text = POLICY_TEXT[lang];
+  text = text.replace(/【上线当天的日期】|【公開当日の日付】|\[Date of publication\]/, POLICY_DATE[lang]);
+  if (/【|\[Date/.test(text)) throw new Error("隐私政策里还有没填的占位");
+  const inline = (line) =>
+    esc(line)
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/info@hinazou\.jp/g, `<a class="text-link" href="mailto:${EMAIL}">${EMAIL}</a>`);
+  const blocks = text
+    .replace(/^# .*\n/, "")
+    .trim()
+    .split(/\n{2,}/);
+  // The closing sentence about which version prevails is already written by the page itself.
+  if (/正本とします|Japanese version prevails/.test(blocks[blocks.length - 1])) blocks.pop();
+  const out = [];
+  for (const block of blocks) {
+    const lines = block.split("\n");
+    let paragraph = [];
+    let list = [];
+    const flush = () => {
+      if (paragraph.length) out.push(`<p>${paragraph.map(inline).join("<br>\n")}</p>`);
+      if (list.length) out.push(`<ul>\n${list.map((item) => `  <li>${inline(item)}</li>`).join("\n")}\n</ul>`);
+      paragraph = [];
+      list = [];
+    };
+    for (const line of lines) {
+      if (/^\*\*\d+\. .+\*\*$/.test(line)) {
+        flush();
+        out.push(`<h2>${inline(line.replace(/^\*\*|\*\*$/g, ""))}</h2>`);
+      } else if (/^\(\d+\) /.test(line)) {
+        flush();
+        out.push(`<h3>${inline(line)}</h3>`);
+      } else if (line.startsWith("- ")) {
+        if (paragraph.length) flush();
+        list.push(line.slice(2));
+      } else {
+        if (list.length) flush();
+        paragraph.push(line);
+      }
+    }
+    flush();
+  }
+  return out.map((line) => `        ${line.replace(/\n/g, "\n        ")}`).join("\n");
+}
+
 function appPrivacyBody() {
-  const sections = [
-    { ja: "1. 取得する情報", zh: "1. 收集哪些信息", en: "1. Information we collect" },
-    { ja: "2. 利用目的", zh: "2. 用来做什么", en: "2. How we use it" },
-    { ja: "3. 外部サービスへの送信", zh: "3. 发给哪些外部服务", en: "3. What is sent to outside services" },
-    { ja: "4. 保存と削除", zh: "4. 保存和删除", en: "4. Keeping and deleting" },
-    { ja: "5. お問い合わせ窓口", zh: "5. 联系窗口", en: "5. Contact" },
-  ];
-  const pending = { ja: "準備中です。", zh: "准备中。", en: "In preparation." };
   return `${pageHead({ ja: "アプリのプライバシーポリシー", zh: "App 隐私政策", en: "App privacy policy" })}
     <section class="section" aria-label="${L({ ja: "アプリのプライバシーポリシー", zh: "App 隐私政策", en: "App privacy policy" })}">
       <div class="wrap prose">
-        <p class="pending-note">${L({
-          ja: `このページは準備中です。翻訳アプリ${APP_NAME.ja}のプライバシーポリシーは、内容の確認が終わりしだい、ここに掲載します。`,
-          zh: `这一页还在准备中。翻译 App${APP_NAME.zh}的隐私政策，内容核实完以后会放在这里。`,
-          en: `This page is in preparation. The privacy policy of the translation app ${APP_NAME.en} will be published here once its contents have been checked.`,
-        })}</p>
-${sections.map((title) => `        <h2>${L(title)}</h2>\n        <p>${L(pending)}</p>`).join("\n")}
-        <dl>
-          <dt>${L({ ja: "事業者名", zh: "经营者", en: "Company" })}</dt>
-          <dd>雛象株式会社（Hinazou Co Ltd）</dd>
-          <dt>${L({ ja: "メール", zh: "邮箱", en: "E-mail" })}</dt>
-          <dd><a class="text-link" href="mailto:${EMAIL}">${EMAIL}</a></dd>
-        </dl>
+${policyHtml()}
         <p class="lang-note">${L({
           ja: "本ポリシーは日本語版を正とします。",
           zh: "本政策有日文、中文、英文三个版本，内容以日文版为准。",
@@ -1020,9 +1056,9 @@ const PAGES = [
     file: "app-privacy.html",
     title: titled({ ja: "アプリのプライバシーポリシー", zh: "App 隐私政策", en: "App privacy policy" }),
     description: {
-      ja: "翻訳アプリのプライバシーポリシー（準備中）。",
-      zh: "翻译 App 的隐私政策（准备中）。",
-      en: "Privacy policy of the translation app (in preparation).",
+      ja: "翻訳アプリのプライバシーポリシー。取り扱う情報、送信先、保存期間などをご案内します。",
+      zh: "翻译 App 的隐私政策：处理哪些信息、发给谁、保存多久。",
+      en: "Privacy policy of the translation app: what is handled, who receives it and how long it is kept.",
     },
     body: appPrivacyBody,
   },

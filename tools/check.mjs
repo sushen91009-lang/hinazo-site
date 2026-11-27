@@ -47,7 +47,7 @@ for (const page of PAGES) {
     // Not to be said (执行单 第八节), and things that must not come back.
     const text = html.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, " ");
     for (const banned of ["第一", "唯一", "最准", "No.1", "ナンバーワン", "唯一の", "所有语言", "すべての言語", "all languages", "没网", "离线", "オフライン", "offline", "安卓", "Android", "百分之百", "100%", "100％", "gmail", "Co., Ltd", "Co.,Ltd", "App Store でダウンロード", "Download on the App Store"]) {
-      if (text.toLowerCase().includes(banned.toLowerCase())) problems.push(`${dir}${page}：出现了不能写的「${banned}」`);
+      if (text.replace(/第一次/g, "").toLowerCase().includes(banned.toLowerCase())) problems.push(`${dir}${page}：出现了不能写的「${banned}」`);
     }
     if (html.toLowerCase().includes("gmail")) problems.push(`${dir}${page}：还有个人邮箱`);
   }

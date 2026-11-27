@@ -1287,3 +1287,14 @@ html[lang="en"] .btn {
     margin-left: auto;
   }
 }
+
+/* App privacy policy page (2026-11-27): the (1) (2) (3) sub-titles inside a numbered section. */
+.prose h3 {
+  margin: 1.4em 0 0.4em;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.prose h3 + p,
+.prose h3 + ul {
+  margin-top: 0;
+}
